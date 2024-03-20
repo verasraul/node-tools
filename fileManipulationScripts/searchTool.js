@@ -13,10 +13,10 @@ function readFile(filename){
     console.error(err);
     }};
 
-readFile();
+readFile('fileA.txt');
 
 // use function to open file.
 // compare fileA to File. 
-// If values in fileA is in fileB print 
+// If values in fileA is in fileB print
 
 

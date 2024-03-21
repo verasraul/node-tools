@@ -7,11 +7,13 @@ const fs = require('fs');
 // Read file.
 function readFile(filename){
     try {
-        const data = fs.readFileSync(filename, 'utf8');
-        // console.log(data);
+        const data = fs.readFileSync(filename, 'utf8').split('/n');
+        const values = data.map(line => line.trim());
+        return values;
     } catch (err) {
     console.error(err);
-    }};
+    }
+};
 
     
 // readFile('fileA.txt');
@@ -26,10 +28,8 @@ let fileB_content = readFile('fileB.txt');
 // if values in fileA not in fileB print "these values are missing from fileB."
 
 function compareFiles(fileA, fileB){
-    console.log("this is FILE-A:");
-    console.log(`${fileA}`)
-    console.log("this is FILE-B:");
-    console.log(fileB)
+
 };
 
 compareFiles(fileA_content,fileB_content);
+console.log(fileA_content);
